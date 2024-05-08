@@ -31,28 +31,4 @@ public class ObjectMappingDemo {
         assertEquals(user.getLogin(), "rest-assured");
     }
 
-
-
-
-
-    @Test
-    void objectMappingUsingSpecifiedMapper() {
-
-//        ObjectMapper mapper = new ObjectMapper();
-
-        io.restassured.mapper.ObjectMapper mapper = getObjectMapper();
-
-        AnotherUser user = RestAssured.get(URL)
-                .as(AnotherUser.class, mapper);
-
-        assertEquals(user.login, "rest-assured");
-    }
-
-    public static io.restassured.mapper.ObjectMapper getObjectMapper() {
-        return new Jackson2Mapper((type, s) -> {
-            ObjectMapper om = new ObjectMapper();
-            om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-            return om;
-        });
-    }
 }

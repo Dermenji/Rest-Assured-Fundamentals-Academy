@@ -1,4 +1,4 @@
-package rest.config;
+package rest.lecture2;
 
 import io.restassured.RestAssured;
 import io.restassured.config.RedirectConfig;

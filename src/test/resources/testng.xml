@@ -1,7 +1,7 @@
 <suite name="REST Assured test examples">
     <test name="All">
         <packages>
-            <package name="rest.m8codeorg.ratelimit.*"/>
+            <package name="in.reqres.tests.*"/>
         </packages>
     </test>
 

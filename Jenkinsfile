@@ -16,7 +16,7 @@ pipeline {
                 // Clean the workspace before checking out the code
                 cleanWs()
                 // Checkout the code from the GitHub repository
-                git branch: 'demo', url: 'https://github.com/Dermenji/TestApiFramework.git'
+                git branch: 'demo', url: 'https://github.com/Dermenji/Rest-Assured-Fundamentals-Academy.git'
             }
         }
 

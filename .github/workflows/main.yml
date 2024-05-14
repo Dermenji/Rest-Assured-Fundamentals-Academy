@@ -17,19 +17,19 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: demo
 
       - name: Set up JDK 19
         id: setup-java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '19'
           distribution: 'temurin'
 
       - name: Cache Maven packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
@@ -40,7 +40,7 @@ jobs:
         run: mvn clean test
 
       - name: Upload Allure results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: ${{ env.ALLURE_RESULTS_DIR }}
@@ -59,7 +59,7 @@ jobs:
           JAVA_HOME: ${{ steps.setup-java.outputs.path }}
 
       - name: Upload Allure Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report

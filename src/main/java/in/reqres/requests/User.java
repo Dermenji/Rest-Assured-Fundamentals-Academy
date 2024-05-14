@@ -6,7 +6,7 @@ public class User {
     private String job;
     private String id;
     private String createdAt;
-    private String updatedAt;
+    private String updatedAt;//htgutyt
 
     // Getters and setters
     public String getName() {

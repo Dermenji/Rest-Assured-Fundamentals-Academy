@@ -23,7 +23,7 @@ public class RegistrationTests extends ApiTestBase {
                 .then()
                 .statusCode(200)
                 .body("id", notNullValue())
-                .body("token", notNullValue());
+                .body("token", notNullValue());///tetet
     }
 
     @Test
